@@ -1,1 +1,1 @@
-from miniminiai import *
+from .miniminiai import *
