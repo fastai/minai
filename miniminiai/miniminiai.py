@@ -11,27 +11,27 @@ __all__ = ['def_device', 'act_gr', 'get_dls', 'Dataset', 'collate_dict', 'inplac
            'saved', 'DownBlock', 'UpBlock', 'EmbUNetModel', 'ddim_step', 'sample', 'cond_sample']
 
 # %% ../miniminiai.ipynb 0
-import math,torch,matplotlib.pyplot as plt
-import torch
-from torch import nn, tensor
+import math, typing
+from collections.abc import Mapping
+from copy import copy
+from itertools import zip_longest
+from functools import partial, wraps
+from operator import attrgetter, itemgetter
+
+import matplotlib.pyplot as plt
 import numpy as np
 import fastcore.all as fc
-import typing
-from collections.abc import Mapping
-from torcheval.metrics import MulticlassAccuracy,Mean
-from torch.utils.data import default_collate
-from torch.optim.lr_scheduler import ExponentialLR
-from operator import attrgetter
-from functools import partial, wraps
-from operator import itemgetter
-from copy import copy
-from torch import optim
-import torch.nn.functional as F
 from fastprogress import progress_bar, master_bar
-from itertools import zip_longest
+
+import torch
+from torch import nn, optim
 from torch.utils.data import DataLoader
+import torch.nn.functional as F
+from torch.optim.lr_scheduler import ExponentialLR
+from torch.utils.data import default_collate
+
+from torcheval.metrics import Mean
 from einops import rearrange
-from fastprogress import progress_bar
 from accelerate import Accelerator
 
 # %% ../miniminiai.ipynb 5
