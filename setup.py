@@ -27,6 +27,7 @@ setup(
         "torchvision",
         "fastprogress",
         "einops",
+        "accelerate",
 
     ],
     classifiers=[
