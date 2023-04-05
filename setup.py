@@ -24,6 +24,9 @@ setup(
         "numpy",
         "matplotlib",
         "torcheval",
+        "torchvision",
+        "fastprogress",
+        "einops",
 
     ],
     classifiers=[
