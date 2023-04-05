@@ -449,7 +449,7 @@ def noisify(x0):
     return (xt, t.to(device)), ε
 
 def collate_ddpm(b): return noisify(default_collate(b)[xl])
-def dl_ddpm(ds): return DataLoader(ds, batch_size=bs, collate_fn=collate_ddpm, num_workers=4)
+def dl_ddpm(ds, bs=32): return DataLoader(ds, batch_size=bs, collate_fn=collate_ddpm, num_workers=4)
 
 def timestep_embedding(tsteps, emb_dim, max_period= 10000):
     exponent = -math.log(max_period) * torch.linspace(0, 1, emb_dim//2, device=tsteps.device)
