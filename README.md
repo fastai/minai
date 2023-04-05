@@ -8,7 +8,7 @@ The mini version of fastai's miniai PyTorch framework created during the fastai 
 pip install miniminiai
 ```
 
-of to install from source clone this repo and run:
+or to install from source clone this repo and run:
 
 ```bash
 pip install -e .
