@@ -21,6 +21,7 @@ setup(
     install_requires=[
         "torch",
         "fastcore",
+        "fastprogress",
         "numpy",
         "matplotlib",
         "torcheval",
