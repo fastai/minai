@@ -390,7 +390,10 @@ class AccelerateCB(TrainCB):
     def before_fit(self, learn):
         learn.model,learn.opt,learn.dls.train,learn.dls.valid = self.acc.prepare(
             learn.model, learn.opt, learn.dls.train, learn.dls.valid)
-
+    
+    def after_fit(self, learn):
+        learn.model = self.acc.unwrap_model(learn.model)
+    
     def backward(self, learn): self.acc.backward(learn.loss)
 
 
