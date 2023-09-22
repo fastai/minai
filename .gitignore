@@ -1,6 +1,4 @@
-## A python gitignore file
-# Created by https://www.gitignore.io/api/python
-
+models/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
