@@ -12,7 +12,7 @@ __all__ = ['def_device', 'set_seed', 'Dataset', 'TfmDataset', 'get_dls', 'collat
            'clean_mem']
 
 # %% ../core.ipynb 1
-import math, typing, random, numpy as np
+import sys, gc, traceback, math, typing, random, numpy as np
 from collections.abc import Mapping
 from copy import copy
 from itertools import zip_longest
